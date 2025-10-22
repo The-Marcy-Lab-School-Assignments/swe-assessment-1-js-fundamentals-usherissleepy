@@ -14,23 +14,40 @@
 // ============================================
 
 const petJudger = (petBreed, petName) => {
-  // Your code here
-};
+  if (petName === undefined){
+    console.log("Missing information. Please provide a valid pet.")
+    return
+  }
+  if (petBreed === 'dog') {
+    console.log(`I love dogs! ${petName} is so cute!`)
+  } else if (petBreed === 'cat') {
+    console.log(`I love cats! ${petName} is so cute!`)
+  } else if (petBreed === 'turtle') {
+    console.log(`Who doesn't love a good turtle? ${petName} is the tops.`)
+  } else if (petBreed === 'snake') {
+    console.log(`Not a fan, please take ${petName} and leave.`)
+  } else
+    console.log("What an...interesting pet.");
+}
 
 // ============================================
 // Question 2: loopFromOneUpToAnother
 // ============================================
 
 const loopFromOneUpToAnother = (firstNum, secondNum) => {
-  // Your code here
-};
+  for (let i = firstNum; i < secondNum; i++) {
+    console.log(i)
+  }
+}
 
 // ============================================
 // Question 3: shoutEveryLetterForLoop
 // ============================================
 
 const shoutEveryLetterForLoop = (str) => {
-  // Your code here
+  for (let i = 0; i < str.length; i++){
+    console.log(`${str[i].toUpperCase()}!`)
+  }
 };
 
 // ============================================
@@ -38,7 +55,22 @@ const shoutEveryLetterForLoop = (str) => {
 // ============================================
 
 const letterCaseCounts = (str) => {
-  // Your code here
+  let lowercase = 0;
+  let uppercase = 0;
+  let neither = 0;
+  
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (char >= 'a' && char <= 'z') {
+      lowercase++;
+    } else if (char >= 'A' && char <= 'Z') {
+      uppercase++;
+    } else {
+      neither++;
+    }
+  }
+  
+  return { lowercase, uppercase, neither };
 };
 
 // ============================================
@@ -46,7 +78,15 @@ const letterCaseCounts = (str) => {
 // ============================================
 
 const getNamesOfGreedyGnomes = (gnomes) => {
-  // Your code here
+  const greedyNames = [];
+
+  for (let i = 0; i < gnomes.length; i++) {
+    if (gnomes[i].stolenDecorations.length > 1) {
+      greedyNames.push(gnomes[i].name);
+    }
+  }
+
+  return greedyNames;
 };
 
 // ============================================
