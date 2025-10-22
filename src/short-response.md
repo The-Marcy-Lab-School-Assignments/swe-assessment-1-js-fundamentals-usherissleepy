@@ -92,6 +92,15 @@ console.log("another one")
 
 )
 
+    Above are examples of what a default export will look like and what a named export will look like.  Now that you have your exports ready, how do we import them into where we want to use them?  To import a module you go to the file you want to import it into and you put const and the name of the function, set it equal to require and within parenthesis the file name the function is being export from.  Let's assume the file that we have our functions in is called functions.js.  How it would look is:
+
+(```
+const function = require('./functions.js') // <= The file name
+// ^ The name of our function
+)
+
+    Here we can see to import we simply use const and put the name of the function and then require it from whatever file it is in.
+
 ### Question 7
 
 ### Question 8
