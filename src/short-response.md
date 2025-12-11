@@ -105,6 +105,31 @@ const func = require('./functions.js') // <= The file name
 
 ### Question 7
 
-    After the code runs the values that will be held in "fruits" are going to be (```['apple', 'banana', 'cherry', 'date']) and the values in "fruitsMinusOne" are (```['apple', 'banana', 'cherry']).  We can see that "fruits" still says the same and "fruitsMinusOne" removed 'date' at the end.  It is necessary to make a copy of the array in order to keep the function pure, because if we directly modified the array using methods like splice, pop, or push it will change the original array outside of it's scope, and a pure function does not alter anything outside of it's scope the way an impure function does.  When we make a copy of the array the function works on a new independent copy.  That's why when we did "fruitsMinusOne" the values in "fruits" stayed the same.  The reason why we don't want to modify the array directly is because we want the function to remain pure, and the reason we want the function to be pure is because pure functions always produces the same output for the same input.  This allows the code to be more predictable and reliable.  Pure functions also are less likely to break other parts of your code because they are independent and only work within that scope.
+    After the code runs the values that will be held in "fruits" are going to be (```['apple', 'banana', 'cherry', 'date']) and the values in "fruitsMinusOne" are (```['apple', 'banana', 'cherry']).  We can see that "fruits" still says the same and "fruitsMinusOne" removed 'date' at the end.  It is necessary to make a copy of the array in order to keep the function pure, because if we directly modified the array using methods like splice, pop, or push it will change the original array outside of it's scope, and a pure function does not alter anything outside of it's scope the way an impure function does.  When we make a copy of the array the function works on a new independent copy.  That's why when we did "fruitsMinusOne" the values in "fruits" stayed the same.  The reason why we don't want to modify the array directly is because we want the function to remain pure, and the reason we want the function to be pure is because pure functions always produce the same output for the same input.  This allows the code to be more predictable and reliable.  Pure functions also are less likely to break other parts of your code because they are independent and only work within that scope.
 
 ### Question 8
+
+The data type I would use to represent a single item in the cart is an object because each item has a bunch of prorperties such as the price, name, quantity, etc.. so an object would be the best data type to use here. The data type I would use to represent the entire shopping cart is an array because the shopping cart is a list of the items you want to buy, and an array is a list of elements.
+
+### Example:
+
+```js
+const shoppingCart = {
+  id: 101,
+  name: "Carbon Fiber Spoiler",
+  price: 239.99,
+  quantity: 1,
+},
+{
+    id: 202,
+    name: "Cold Air Intake",
+    price: 449.99
+    quantity: 2,
+},
+{
+    id: 303,
+    name: "Exhaust Pipes",
+    price: 234.99,
+    quantity: 3,
+}
+```
